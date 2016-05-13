@@ -2,8 +2,8 @@ import os
 import sys
 PLATFORMS = ["wear", "mobile"]
 EXTENSIONS = (".properties", ".java", ".xml", ".gradle")
-package = "com.example.wearapp"#input("PackageID (for example com.example.wearapp): ")
-#name = input("App Name: ")
+package = input("PackageID (for example com.example.wearapp): ")
+name = input("App Name: ")
 for platform in PLATFORMS:
     for dirpath, dirnames, filenames in os.walk(platform):
         for filename in filenames:
@@ -11,8 +11,8 @@ for platform in PLATFORMS:
                 fn = os.path.join(dirpath, filename)
                 with open(fn) as srcfile:
                     src = srcfile.read()
-                #src = src.replace("com.example.weartemplate", package)
-                #src = src.replace("WearTemplate", name)
+                src = src.replace("com.example.weartemplate", package)
+                src = src.replace("WearTemplate", name)
                 with open(fn, "w") as writefile:
                     writefile.write(src)
     parts = package.split(".")
