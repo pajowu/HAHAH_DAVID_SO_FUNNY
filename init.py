@@ -22,4 +22,7 @@ for platform in PLATFORMS:
             os.mkdir(dir_path)
     new_path = platform+"/src/main/java/"+"/".join(parts)
     os.rename(platform+"/src/main/java/com/example/weartemplate", new_path)
-    os.removedirs(platform+"/src/main/java/com/example")
+    try:
+        os.removedirs(platform+"/src/main/java/com/example")
+    except:
+        pass
