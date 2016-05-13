@@ -1,4 +1,4 @@
-package com.example.weartemplace;
+package com.example.weartemplate;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

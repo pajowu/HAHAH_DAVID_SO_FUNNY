@@ -1,4 +1,4 @@
-package com.example.weartemplace;
+package com.example.weartemplate;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

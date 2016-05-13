@@ -1,4 +1,4 @@
-package com.example.weartemplace;
+package com.example.weartemplate;
 
 import org.junit.Test;
 
