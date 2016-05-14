@@ -1,4 +1,4 @@
-![TwitWear](https://raw.githubusercontent.com/pajowu/HAHAH_DAVID_SO_FUNNY/master/logo.png)
+![TwitWear](https://raw.githubusercontent.com/pajowu/twitwear/master/logo.png)
 
 # TwitWear
 
