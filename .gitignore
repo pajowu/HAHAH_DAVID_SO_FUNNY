@@ -6,3 +6,7 @@
 .DS_Store
 /build
 /captures
+release.keystore
+images/
+fabric.properties
+mobile/src/main/java/de/pajowu/twitwear/TwitWearApplication.java

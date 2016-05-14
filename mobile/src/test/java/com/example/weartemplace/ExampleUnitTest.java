@@ -1,4 +1,4 @@
-package com.example.weartemplate;
+package de.pajowu.twitwear;
 
 import org.junit.Test;
 

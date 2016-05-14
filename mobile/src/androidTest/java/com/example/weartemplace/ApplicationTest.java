@@ -1,4 +1,4 @@
-package com.example.weartemplate;
+package de.pajowu.twitwear;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

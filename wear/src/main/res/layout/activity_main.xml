@@ -6,22 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    tools:context="com.example.weartemplate.MainActivity"
+    tools:context="de.pajowu.twitwear.MainActivity"
     tools:deviceIds="wear">
-
+    <de.pajowu.twitwear.CustomRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
     <TextView
-        android:id="@+id/text"
-        app:layout_box="all"
+        android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_world" />
-
-    <TextView
-        android:id="@+id/clock"
-        app:layout_box="all"
-        android:layout_gravity="bottom|start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white" />
-
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_data_available" />
 </android.support.wearable.view.BoxInsetLayout>

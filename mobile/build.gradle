@@ -1,28 +1,49 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'io.fabric'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.example.weartemplate"
+        applicationId "de.pajowu.twitwear"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            storeFile file("../release.keystore")
+            storePassword "123456"
+            keyAlias "twitwear"
+            keyPassword "123456"
+        }
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
-
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     wearApp project(':wear')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.google.android.gms:play-services:7.8.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true
+    }
+    compile('com.twitter.sdk.android:twitter:1.12.0@aar') {
+        transitive = true
+    }
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.guava:guava:19.0'
+    compile 'com.android.support:multidex:1.0.0'
 }
